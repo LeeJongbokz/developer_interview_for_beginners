@@ -5,7 +5,7 @@
 ### Python vs Java vs Kotlin
 
 <details>
-   <summary> 예비 답안 보기 (👈 Click)</summary>
+   <summary> 답안 보기 (👈 Click)</summary>
 <br />
 
 -----------------------
