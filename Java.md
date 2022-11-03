@@ -39,7 +39,16 @@
 + 
 </details>
 
+
 -----------------------
+### Stream의 forEach와 map의 차이점은?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
+-----------------------
+
 
 ### 리플렉션이란?
 
