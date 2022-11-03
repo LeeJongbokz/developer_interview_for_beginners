@@ -52,3 +52,15 @@
 </details>
 
 -----------------------
+### Checked Exception vs Unchecked Exception?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
+-----------------------
++ 
+</details>
+
+
+-----------------------
