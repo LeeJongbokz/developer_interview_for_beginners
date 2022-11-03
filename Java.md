@@ -79,3 +79,37 @@
 
 
 -----------------------
+
+
+### synchronized 키워드란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
++ 
+</details>
+
+
+-----------------------
+
+### synchronized 키워드란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
++ 
+</details>
+
+
+-----------------------
+
+### synchronized 붙으면 JVM 내부에서 어떤 식으로 작동되는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
++ 
+</details>
+
+
+-----------------------
