@@ -13,6 +13,18 @@
 
 -----------------------
 
+
+### DI의 장점은?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
++  
+</details>
+
+-----------------------
+
+
 ### Filter vs InterCeptor?
 
 <details>
