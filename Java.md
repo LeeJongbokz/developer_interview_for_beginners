@@ -2,7 +2,7 @@
 <br>
 
 -----------------------
-### try~with~resource란?
+### try-with-resource란?
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
