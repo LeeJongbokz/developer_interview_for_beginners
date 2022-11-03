@@ -34,3 +34,14 @@
 <br />
 + 
 </details>
+
+
+-----------------------
+
+### DNS란? DNS는 어떻게 동작하나요? 
+ 
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
++ 
+</details>
