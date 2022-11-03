@@ -2,6 +2,24 @@
 <br>
 
 -----------------------
+### inner 클래스란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
++ 
+</details>
+
+-----------------------
+### static inner 클래스란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
++ 
+</details>
+
+-----------------------
 ### equals 메소드란?
 
 <details>
