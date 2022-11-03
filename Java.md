@@ -2,6 +2,14 @@
 <br>
 
 -----------------------
+### try~with~resource란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
++ 
+</details>
+-----------------------
 ### inner 클래스란?
 
 <details>
