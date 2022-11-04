@@ -37,7 +37,7 @@
 ### 클러스터링 인덱스는?
 
 <details>
-   <summary> 답안 보기 (👈 Click)</summary> (작성중)
+   <summary> 답안 보기 (👈 Click)</summary>
 <br />
 
 + 프라이머리 키 값이 비슷한 레코드끼리 묶어서 저장하는 것을 클러스터링 인덱스라고 표현합니다. <br>
