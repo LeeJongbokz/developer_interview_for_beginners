@@ -91,6 +91,16 @@
 </details>
 
 -----------------------
+
+### 메소드 레퍼런스란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
++ 
+</details>
+
+-----------------------
 ### Stream이란?
 
 <details>
