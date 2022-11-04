@@ -115,7 +115,32 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
    
-+
++ 자바에서 Null처리는 == 혹은 Optional을 활용해서 할 수 있습니다. 
+  단, ==으로 하는 방법의 단점은 프로그래머가 실수로 빼먹을 수 있다는 점입니다. 
+</details>
+
+
+-----------------------
+
+### Optional에서 ofNullable 메소드는 어떤 경우에 사용되는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+   
++ ofNullable메소드는 전달되는 값이 null일 수 있는 경우에 사용합니다. 
+</details>
+
+
+-----------------------
+
+### Optional에서 isPresent 메소드는 어떤 경우에 사용되는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+   
++ isPresent 메소드는 값이 존재하는지 확인하고 싶은 경우에 사용합니다. 
 </details>
 
 
