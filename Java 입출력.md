@@ -55,3 +55,29 @@
 
 -----------------------
 
+### BufferedReader와 BufferedWriter를 사용하는 이유는?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ BufferedReader와 BufferedWriter는 버퍼를 이용해서 입출력 효율을 높일 수 있도록 <br>
+  해주는 역할을 합니다. <br>
+  버퍼를 이용하면 입출력의 효율이 매우 좋아질 수 있다는 장점이 있습니다.<br> 
+  BufferedReader의 readLine()을 사용하면 데이터를 라인 단위로 읽을 수 있습니다. <br> 
+</details>
+
+-----------------------
+
+### InputStreamReader와 OutputStreamReader를 사용하는 이유는?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ InputStreamReader와 OutputStreamReader는 바이트 기반 스트림을 문자 스트림으로 연결하는 역할을 합니다. <br>
+  그리고 바이트 기반의 스트림의 데이터를 지정된 인코딩의 문자 데이터로 변환합니다. <br> 
+</details>
+
+-----------------------
+
