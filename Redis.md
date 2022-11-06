@@ -9,10 +9,8 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
    
-   
-</details> 
-+  
-
++     
+</details>
 -----------------------
 
 ### Redis Single thread는 어떤 식으로 동작하는가?
@@ -21,7 +19,6 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 
------------------------
 +  
 </details>
 
@@ -34,7 +31,6 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 
------------------------
 +  
 </details>
 
