@@ -169,3 +169,15 @@
 
 
 -----------------------
+
+### Optional orElseGet(Supplier)란 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+   
++ Optional에 값이 있으면 가져오고, 없으면 ~~을 하라는 의미이다.  
+</details>
+
+
+-----------------------
