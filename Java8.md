@@ -181,3 +181,17 @@
 
 
 -----------------------
+
+### Java8에서 Date와 Time API가 등장한 이유는 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+   
++ (1) 기존의 java.util.date 객체는 mutable하기 때문에 Thread-safe하지 않다
+  (2) 버그가 발생할 여지가 많았다.(타입 안정성이 없다)  
+  (3) epoch 시간을 제공한다.  
+</details>
+
+
+-----------------------
