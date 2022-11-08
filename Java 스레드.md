@@ -254,7 +254,33 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 
-+ 
++ 1) 예외 처리 API를 제공하지 않는다
+  2) 여러 Future를 조합할 수 없다
+  3) 블로킹 코드(get())를 사용하지 않고서는 작업이 끝났을 때, 콜백을 실행할 수 없다. 
+</details>
+
+-----------------------
+
+### CompletableFuture에서 어떻게 비동기로 작업을 실행하는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 리턴값이 없는 경우는 runAsync()를 사용하고,
+  리턴값이 있는 경우는 supplyAsync()를 사용합니다. 
+</details>
+
+-----------------------
+
+### CompletableFuture에서 어떻게 콜백을 제공하는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ thenApply(Function)는 리턴값을 받아서 다른 값으로 바꾸는 콜백입니다.
+  thenAccept(Consumer)는 리턴값을 또 다른 작업으로 처리하는 콜백입니다. 
 </details>
 
 -----------------------
