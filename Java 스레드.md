@@ -64,3 +64,139 @@
 
 -----------------------
 
+### 자바에서 멀티 스레드를 구현하기 위한 방법에는 무엇이 있습니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ Thread 클래스를 상속 받거나, Runnable 인터페이스를 구현해야 합니다. 
+</details>
+
+-----------------------
+
+### 자바에서 스레드 실행과 관련된 특징은 무엇이 있습니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 스레드의 실행 순서를 보장하지 못한다는 점입니다. 
+</details>
+
+-----------------------
+
+### 스레드의 sleep 메소드란 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 현재 스레드를 대기시키는 것을 의미합니다.  
+  sleep 메소드를 실행하면 다른 스레드에 우선권이 넘어갑니다. 
+</details>
+
+-----------------------
+
+### 스레드의 interrupt 메소드란 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 대기 중인 메소드를 깨우는 것을 의미합니다. 
+</details>
+
+-----------------------
+
+
+### 스레드의 join 메소드란 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 
+</details>
+
+-----------------------
+
+
+### Executors란 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 스레드를 만들고 관리하는 작업을 담당하는 고수준의 API를 의미합니다. 
+</details>
+
+-----------------------
+
+### ExecutorService란 무엇입니까? ExecutorService 내부에 무엇이 존재합니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ Executor를 상속 받은 인터페이스를 의미합니다. 
+  ExecutorService 내부에는 스레드 풀이 존재합니다.  
+</details>
+
+-----------------------
+
+### 스레드 풀의 장점은 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 스레드 풀은 스레드를 생성하는 비용이 적게 든다는 점이 장점입니다. 
+</details>
+
+-----------------------
+
+### ExecutorService의 submit()과 shutdown()은 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ submit()은 스레드의 실행을 위한 값을 전달하는 것을 의미합니다.
+  shutdown()은 ExecutorService를 종료하는 것을 의미합니다. 
+</details>
+
+-----------------------
+
+### ExecutorService의 Blocking Queue는 왜 필요합니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 스레드 풀에 스레드들이 모두 사용중일 때, 요청을 대기시키기 위해서 필요합니다. 
+</details>
+
+-----------------------
+
+### Fork/join 프레임워크란 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ ExecutorService의 구현체로서, 멀티 프로세서를 사용하며, 애플리케이션 개발할 때 유용합니다. 
+</details>
+
+-----------------------
+
+### Runnable과 Callable의 차이점은 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ Runnable은 반환값이 없지만, Callable은 반환값이 존재한다는 점이 차이점입니다. 
+</details>
+
+-----------------------
