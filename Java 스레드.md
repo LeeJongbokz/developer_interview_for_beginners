@@ -279,7 +279,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 
-+ thenApply(Function)는 리턴값을 받아서 다른 값으로 바꾸는 콜백입니다.
++ thenApply(Function)는 리턴값을 받아서 다른 값으로 바꾸는 콜백입니다. <br> 
   thenAccept(Consumer)는 리턴값을 또 다른 작업으로 처리하는 콜백입니다. 
 </details>
 
