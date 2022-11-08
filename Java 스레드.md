@@ -200,3 +200,61 @@
 </details>
 
 -----------------------
+
+### Future란 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 비동기적인 작업의 현재 상태를 조회하거나 작업을 가져올 수 있는 객체를 의미합니다. 
+</details>
+
+-----------------------
+
+### ExecutorService의 invokeAll()이란 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 여러 개의 Callable을 한 번에 담는 메소드를 의미합니다. 
+  즉, 여러 작업을 동시에 실행 가능하게 해줍니다. 
+</details>
+
+-----------------------
+
+### ExecutorService의 invokeAny()란 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 여러 작업 중 하나라도 먼저 응답이 오면 끝내는 것을 의미합니다. 
+  즉, 여러 작업 중 가장 짧은 작업만큼의 시간이 걸리며,
+  블로킹 콜에 속합니다. 
+</details>
+
+-----------------------
+
+### CompletableFuture란 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 자바에서 비동기 프로그래밍을 가능하게 하는 인터페이스를 의미합니다.  
+</details>
+
+-----------------------
+
+### Future의 단점은 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 
+</details>
+
+-----------------------
