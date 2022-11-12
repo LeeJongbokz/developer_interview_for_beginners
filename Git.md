@@ -104,3 +104,28 @@
 </details>
 
 -----------------------
+
+### Git에서 워킹 디렉토리의 모든 파일은 크게 어떻게 나뉘는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ Tracked(관리대상임) 와 Untracked(관리대상이 아님) 으로 나뉩니다. 
+ 
+</details>
+
+-----------------------
+
+### Git에서 Tracked 파일은 어떤 파일이고, 어떻게 분류되는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ Tracked 파일은 이미 스냅샷에 포함돼 있던 파일이고, <br> 
+  Tracked 파일은 Unmodified(수정하지 않음), Modified(수정함), Staged(커밋으로 저장소에 기록할)로 구분됩니다. 
+ 
+</details>
+
+-----------------------
