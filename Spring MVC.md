@@ -20,4 +20,26 @@
 
 -----------------------
 
+### DispatcherServlet이란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+ - HTTP 요청 핸들러/컨트롤러를 위한 중앙 디스패처입니다. <br>
+   등록된 핸들러에게 웹 요청을 처리하기 위해 보내는 역할을 하며, <br> 
+   편리한 mapping과 exception handling 기능을 제공합니다. <br> 
+  
+</details>
+
+-----------------------
+
+### HandlerMapping이란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+ - 요청과 handler object간의 mapping을 의미합니다. <br> 
+  
+</details>
+
 
