@@ -176,3 +176,25 @@
 </details>
 
 -----------------------
+
+### 바이트코드 조작 라이브러리에는 무엇이 있는가? 
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ ASM, Javassist, ByteBuddy 등이 있습니다. 
+</details>
+
+-----------------------
+
+### 스프링은 어떻게 컴포넌트 스캔을 하는가? 
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++  
+</details>
+
+-----------------------
