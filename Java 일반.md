@@ -68,6 +68,18 @@
 </details>
 
 -----------------------
+
+### 리플렉션의 시작은 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ Class<T>입니다. <br> 
+</details>
+
+----------------------- 
+
 ### Checked Exception vs Unchecked Exception?
 
 <details>
