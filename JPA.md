@@ -27,6 +27,18 @@
 
 -----------------------
 
+### @Column의 name이란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ name은 필드와 매핑할 테이블의 컬럼 이름을 의미합니다. 
+</details>
+
+
+-----------------------
+
 ### @ManyToOne이란?
 
 <details>
