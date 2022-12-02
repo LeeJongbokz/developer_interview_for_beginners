@@ -45,3 +45,15 @@
 <br />
 + 
 </details>
+
+-----------------------
+
+### SSH란? 
+ 
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://library.gabia.com/contents/infrahosting/9002/] 
+   
++ Secure Shell의 줄임말로, 원격 호스트에 접속하기 위해 사용되는 보안 프로토콜입니다. 
+</details>
