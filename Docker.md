@@ -8,7 +8,8 @@
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
-
+[참고: https://docs.docker.com/get-started/] 
+   
 + 컨테이너란 당신의 머신에서 동작하는 샌드박스화된 프로세스로서, <br> 
   Host 머신의 모든 다른 프로세스들과 격리된 것입니다. <br> 
   이러한 격리는 Linux에 오래 있던 기능인 커널 네임스페이스와 cgroup을 활용합니다. <br>
