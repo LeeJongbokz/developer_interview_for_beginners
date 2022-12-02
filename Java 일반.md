@@ -218,6 +218,48 @@
 
 ----------------------- 
    
+   
+### 리플렉션의 사용 예시에는 무엇이 있는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 스프링의 의존성 주입, mvc 뷰에서 넘어온 데이터를 객체에 바인딩할 때 <br>
+  하이버네이트의 @Entity 클래스에 Setter가 없다면 리플렉션을 사용 <br>
+  JUnit은 ReflectionUtils 
+   
+</details>
+
+----------------------- 
+   
+
+### 다이나믹 프록시는 무엇의 일부인가? 프록시가 사용되는 대표적인 예가 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 리플렉션의 일부입니다. <br> 
+  스프링 데이터 JPA입니다. <br>  
+   
+</details>
+
+-----------------------    
+   
+   
+### 스프링 데이터 JPA에서는 무엇을 쓰는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 스프링 AOP를 활용한다. <br> 
+   
+</details>
+
+-----------------------    
+   
 ### Checked Exception vs Unchecked Exception?
 
 <details>
