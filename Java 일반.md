@@ -89,17 +89,135 @@
 
 -----------------------
 
-### 리플렉션의 시작은 무엇인가?
+### 리플렉션의 시작은 무엇인가? 그리고 그것에 접근하는 방법은 무엇인가?
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 
 + Class<T>입니다. <br> 
+  모든 클래스를 로딩 한 다음 Class<T>의 인스턴스가 생깁니다. <br> 
+ "타입.class"로 접근할 수 있습니다. <br>
+  모든 인스턴스는 getClass() 메소드를 가지고 있습니다. <br>
+  "인스턴스.getClass()"로 접근할 수 있습니다. 
+</details>
+
+----------------------- 
+   
+  
+### Class<T>를 통해 할 수 있는 것은 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 1) 필드(목록) 가져오기 <br>
+  2) 메소드(목록) 가져오기 <br>
+  3) 상위 클래스 가져오기 <br> 
+  4) 인터페이스 (목록) 가져오기 <br>
+  5) 애노테이션 가져오기
+  6) 생성자 가져오기
+   
 </details>
 
 ----------------------- 
 
+
+### 중요 어노테이션인 @Retention, @Inherit, @Target은 각각 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ @Retention: 해당 애노테이션을 언제까지 유지할 것인가? 
+  @Inherit: 해당 애노테이션을 하위 클래스까지 전달할 것인가?
+  @Target: 어디에 사용할 수 있는가? 
+   
+</details>
+
+----------------------- 
+
+### 리플렉션의 getAnnotations()와 getDeclaredAnnotations()의 차이점은 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ getAnnotations()는 상속받은(@Inherit) 애노테이션까지 조회합니다. 
+  getDeclaredAnnotations()는 자기 자신에만 붙어 있는 어노테이션을 조회합니다. 
+   
+</details>
+
+----------------------- 
+
+
+### 리플렉션 API에서 생성자로 인스턴스를 어떻게 만드는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ Constructor.newInstance(params)로 만든다. 
+   
+</details>
+
+----------------------- 
+ 
+
+### 리플렉션 API에서 필드 값을 어떻게 접근하고 설정하는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ Field.get(object), Field.set(object, value)를 통해 접근하고 설정한다. 
+   
+</details>
+
+----------------------- 
+   
+### 리플렉션 API에서 메소드는 어떻게 실행하는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ Object Method.invoke(object, params)를 통해 실행한다. 
+   
+</details>
+
+----------------------- 
+
+
+### 리플렉션 사용시 주의할 점은 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 1) 지나친 사용은 성능 이슈를 야기할 수 있으므로, 반드시 필요한 경우에만 사용한다. <br>
+  2) 컴파일 타임에 확인되지 않고, 런타임 시에만 발생하는 문제를 만들 가능성이 있다. <br> 
+  3) 접근 지시자를 무시할 수 있다. 
+   
+</details>
+
+----------------------- 
+
+   
+### 리플렉션의 사용 예시에는 무엇이 있는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 스프링의 의존성 주입, mvc 뷰에서 넘어온 데이터를 객체에 바인딩할 때 <br>
+  하이버네이트의 @Entity 클래스에 Setter가 없다면 리플렉션을 사용 <br>
+  JUnit은 ReflectionUtils 
+   
+</details>
+
+----------------------- 
+   
 ### Checked Exception vs Unchecked Exception?
 
 <details>
