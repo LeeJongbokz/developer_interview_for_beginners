@@ -324,3 +324,101 @@
 </details>
 
 -----------------------
+
+### 완료한 커밋을 수정해서 다시 커밋하고 싶을 때 어떤 옵션을 사용하는가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ git commit --amend이다. <br>
+ 
+</details>
+
+-----------------------
+
+### 파일 상태를 Unstaged 상태로 변경하는 명령어는 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ git reset HEAD <file> ... 이다. <br>
+ 
+</details>
+
+-----------------------
+
+### 리모트 저장소를 확인하는 명령어는 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ git remote -v이다. <br>
+ 
+</details>
+
+-----------------------
+
+
+### 리모트 저장소를 추가하는 명령어는 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ git remote add [단축 이름] [url] 이다. <br>
+ 
+</details>
+
+-----------------------
+
+### 리모트 저장소에서 데이터를 가져오려면 간단히 어떻게 실행하는가?  
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ git fetch [remote-name] 이다. <br>
+ 
+</details>
+
+-----------------------
+
+### git fetch vs git pull?  
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ git fetch 명령은 리모트 저장소의 데이터를 모두 로컬로 가져오지만, 자동으로 Merge하지 않는다. <br>
+  git pull 명령은 리모트 저장소의 데이터를 모두 로컬로 가져올 뿐만 아니라, 자동으로 로컬 브랜치와 Merge시킬 수 있다. <br>
+ 
+</details>
+
+-----------------------
+
+### 리모트 저장소의 구체적인 정보를 확인하기 위한 명령어는 무엇인가?   
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ git remote show [리모트 저장소 이름] 이다. 
+ 
+</details>
+
+-----------------------
+
+### 이미 만들어진 태그를 확인하는 명령어는 무엇인가?   
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ git tag 명령이다. 
+ 
+</details>
+
+-----------------------
