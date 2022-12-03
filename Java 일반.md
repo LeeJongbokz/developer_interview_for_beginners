@@ -2,6 +2,24 @@
 <br>
 
 
+
+### Java 11 버전의 특징은?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://learn.microsoft.com/ko-kr/java/openjdk/reasons-to-move-to-java-11]    
++ 1) Java11의 기본 가비지 컬렉터는 G1GC입니다. 
+     Java8까지는 Parellel GC가 기본 GC였습니다. 
+  2) Java 11에는 JVM의 모든 구성 요소에 대한 일반적인 로깅 시스템이 있습니다
+     이 통합 로깅 시스템을 통해 사용자는 무슨 구성 요소를 어느 수준까지 로깅할지 정의할 수 있습니다. 
+     이 세분화된 로깅은 JVM 충돌에 대한 근본 원인 분석을 수행하고, 
+     프로덕션 환경에서 성능 문제를 진단하는 데 유용합니다. 
+  
+   
+</details>
+
+
 -----------------------
 
 ### equals(), hashCode()는 어떻게 오버라이딩 해야 하는가?
