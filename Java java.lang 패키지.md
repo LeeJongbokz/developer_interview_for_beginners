@@ -8,11 +8,29 @@
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
-+ 
+[참고: 자바의 정석] 
+   
++ 매개변수로 객체의 참조변수를 받아서 비교하여 그 결과를 boolean 값으로 알려 주는 역할을 합니다. <br> 
+  아래의 코드는 Object 클래스에 정의되어 있는 equals 메소드의 실제 내용입니다. <br> 
+  
+  ```
+  public boolean equals(Object obj){
+       return (this == obj);
+  }
+  ``` 
 </details>
 
 -----------------------
 
+### Java에서 ==와 equals() 메서드의 차이점은?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
++ 
+</details>
+
+-----------------------
 
 ### hashCode 메소드란?
 
