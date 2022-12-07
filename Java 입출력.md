@@ -134,3 +134,51 @@
 
 -----------------------
 
+### Blocking이란 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://www.youtube.com/watch?v=oEIoqGd-Sns] 
+
+ - 자신의 작업을 진행하다가 다른 주체의 작업이 시작되면, <br> 
+   다른 작업이 끝날 때까지 기다렸다가 자신의 작업을 시작하는 것을 의미합니다. <br> 
+</details>
+
+-----------------------
+
+### Non-Blocking이란 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://www.youtube.com/watch?v=oEIoqGd-Sns] 
+
+ - 다른 주체의 작업과 상관없이 자신의 작업을 하는 것을 의미합니다. <br> 
+</details>
+
+-----------------------
+
+### Synchronous란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://www.youtube.com/watch?v=oEIoqGd-Sns] 
+
+ - 작업을 동시에 수행하거나, 동시에 끝나거나, 끝나는 동시에 시작함을 의미합니다.  <br> 
+</details>
+
+-----------------------
+
+### Asynchronous란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://www.youtube.com/watch?v=oEIoqGd-Sns] 
+
+ - 시작, 종료가 일치하지 않으며, 끝나는 동시에 시작을 하지 않음을 의미합니다.   <br> 
+</details>
+
+-----------------------
