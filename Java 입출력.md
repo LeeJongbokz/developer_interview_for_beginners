@@ -81,3 +81,56 @@
 
 -----------------------
 
+### 직렬화(Serialization)이란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: 자바의 정석] 
++ 직렬화란 객체를 데이터 스트림으로 만드는 것을 뜻합니다. <br> 
+  다시 얘기하면 객체에 저장된 데이터를 스트림에 쓰기(write)위해 연속적인(serial) 데이터로 변환하는 것을 말합니다. <br>
+  반대로 스트림으로부터 데이터를 읽어서 객체를 만드는 것을 역직렬화(Deserialization)이라고 합니다. <br> 
+</details>
+
+-----------------------
+
+### 직렬화(Serialization)가 왜 필요한가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: 자바의 정석] 
+
+</details>
+
+-----------------------
+
+### 직렬화(Serialization)의 단점은?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://techblog.woowahan.com/2551/] 
+
+ - 역직렬화시 클래스 구조 변경의 문제가 있습니다. <br> 
+   즉, 클래스의 멤버 변수 하나만 추가되어도, java.io.InvalidClassException이 발생합니다. <br> 
+   클래스를 변경할 때는 serialVersionUID 값을 관리해주어야 클래스 변경 시 혼란을 줄일 수 있습니다. 
+   
+   serialVersionUID값이 같더라도, 멤버 변수 명은 같아도 멤버 변수 타입이 바뀌면 문제가 발생할 수 있습니다. 
+   이는 primitive type에도 적용되면, 자바 직렬화는 타입에 엄격합니다. 
+</details>
+
+-----------------------
+
+### SerialVersionUID란 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: ] 
+
+ - 
+</details>
+
+-----------------------
+
