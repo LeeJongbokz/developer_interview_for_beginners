@@ -123,6 +123,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://d2.naver.com/helloworld/1329] 
+   
 + Parallel Old GC는 JDK 5 update 6부터 제공한 GC 방식입니다. <br> 
   앞서 설명한 Parallel GC와 비교하여 Old 영역의 GC 알고리즘만 다릅니다. <br>
   이 방식은 Mark-Summary-Compaction 단계를 거칩니다. <br> 
