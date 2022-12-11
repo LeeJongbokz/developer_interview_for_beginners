@@ -234,17 +234,6 @@
 
 
 -----------------------
-### Stream의 map과 flatMap의 차이점은?
-
-<details>
-   <summary> 답안 보기 (👈 Click)</summary>
-<br />
-   
-+
-</details>
-
-
------------------------
 ### Stream의 forEach와 map의 차이점은?
 
 <details>
