@@ -50,6 +50,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://d2.naver.com/helloworld/1329] 
+   
 + Young 영역은 3개의 영역으로 나뉘는데, 하나의 Eden 영역과 두 개의 Survivor 영역으로 나뉩니다. <br> 
   각 영역의 처리절차를 순서에 따라 기술하면 다음과 같습니다. <br> 
   
