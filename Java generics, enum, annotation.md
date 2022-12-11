@@ -62,7 +62,7 @@
      
      void setItem(Object item) { this.item = item;} 
      Object getItem() { return item;}
- ```
+  ```
   
   이 클래스를 지네릭 클래스로 변경하면 다음과 같이 클래스 옆에 <T>를 붙이면 됩니다. <br> 
   그리고 Object를 모두 T로 바꿉니다. <br> 
@@ -75,6 +75,7 @@
      T getItem() { return item; }    
   }
   ```   
+  
   Box<T>에서 T를 타입 변수(type variable)라고 하며, Type의 첫 글자에서 따온 것입니다. <br> 
   타입 변수는 T가 아닌 다른 것을 사용해도 됩니다. <br>
   ArrayList<E>의 경우, 타입 변수 E는 Element(요소)의 첫 글자를 따서 사용했습니다. <br> 
