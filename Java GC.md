@@ -34,6 +34,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://d2.naver.com/helloworld/1329] 
+   
 + (1) 대부분의 객체는 금방 접근 불가능 상태(unreachable)가 됩니다. 
   (2) 오래된 객체에서 젊은 객체로의 참조는 아주 적게 존재합니다. 
   이러한 가설을 'weak generational hypothesis'라고 합니다. 
