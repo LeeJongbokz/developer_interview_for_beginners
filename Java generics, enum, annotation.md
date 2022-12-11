@@ -89,6 +89,46 @@
 </details>
 
 -----------------------
+   
+
+### 와일드카드란 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: 자바의 정석]    
+   
++ 매개변수에 과일박스를 대입하면 주스를 만들어서 반환하는 Juicer라는 클래스가 있고, <br> 
+  이 클래스에는 과일을 주스로 만들어서 반환하는 makeJuice()라는 static 메서드가 다음과 같이 정의되어 있다고 가정하자. <br> 
+   
+  ```
+  class Juicer{
+     static Juice makeJuice(FruitBox<Fruit> box){
+        String tmp = "";
+        for(Fruit f: box.getList()) tmp += f + "";
+        return new Juice(tmp); 
+     }
+  ``` 
+  
+  Juicer 클래스는 지네릭 클래스가 아닌데다, 지네릭 클래스라고 해도 static 메서드에는 타입 매개변수 T를 매개변수에 사용할 수 없으므로 <br> 
+  아예 지네릭스를 적용하지 않던가, 위와 같이 타입 매개변수 대신, 특정 타입을 지정해줘야 합니다. <br> 
+   
+  ```
+  FruitBox<Fruit> fruitBox = new FruitBox<Fruit>();
+  FruitBox<Apple> appleBox = new FruitBox<Apple>();
+  
+  System.out.println(Juicer.makeJuice(fruitBox)); // OK. FruitBox<Fruit>
+  System.out.println(Juicer.makeJuice(appleBox)); // 에러. FruitBox<Apple> 
+  ```
+  
+  이렇게 지네릭 타입을 FruitBox<Fruit>로 고정해 놓으면, 위의 코드에서 알 수 있듯이, <br>
+  FruitBox<Apple> 타입의 객체는 makeJuice()의 매개변수가 될 수 없으므로, <br>
+  다음과 같이 여러 가지 타입의 매개변수를 갖는 makeJuice()를 만들 수 밖에 없습니다. <br> 
+   
+</details>
+
+-----------------------
+
 
 
 ### enum이란?
