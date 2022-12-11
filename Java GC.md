@@ -75,6 +75,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://d2.naver.com/helloworld/1329] 
+   
 + Serial GC, Parellel GC, Parellel Old GC, CMS(Concurrent Mark&Sweep) GC, G1 GC가 있습니다. 
 </details>
 
