@@ -1,7 +1,6 @@
 # Database
 <br>
 
------------------------
 ### RDB vs NoSQL?
 
 <details>
