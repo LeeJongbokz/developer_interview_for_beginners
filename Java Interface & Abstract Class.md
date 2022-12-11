@@ -173,10 +173,13 @@
   interface MyInterface{                                   interface MyInterface{
      void method();                         ->                 void method();
      void newMethod(); // 추상 메서드                          default void newMethod() {}
-  }
+  }                                                        }
   ``` 
-   
-    
+  
+  위의 왼쪽과 같이 newMethod()라는 추상 메서드를 추가하는 대신, 오른쪽과 같이 디폴트 메서드를 추가하면, <br> 
+  기존의 MyInterface를 구현한 클래슬르 변경하지 않아도 됩니다. <br> 
+  즉, 조상 클래스에 새로운 메서드를 추가한 것과 동일해 지는 것입니다. <br> 
+     
 </details>
 
 -----------------------
