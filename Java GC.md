@@ -87,6 +87,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://d2.naver.com/helloworld/1329] 
+   
 + Serial GC는 Young 영역에서의 GC는 앞 절에서 설명한 방식을 사용합니다. <br> 
   Old 영역의 GC는 mark-sweep-compact라는 알고리즘을 사용합니다. <br> 
   이 알고리즘의 첫 단계는 Old 영역에 살아 있는 객체를 식별(Mark)하는 것입니다. <br> 
