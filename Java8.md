@@ -169,14 +169,14 @@
 <br />
 [참고: https://www.geeksforgeeks.org/difference-between-map-and-flatmap-in-java-stream/] 
    
-+ map()
++ map() <br> 
   (1) 하나의 input에 대해 하나의 value를 반환합니다. <br>
   (2) 1:1 매핑이 발생합니다. <br>
   (3) 오직 매핑만을 수행합니다. <br>
   (4) 값의 스트림을 만듭니다. <br>
   (5) 오직 변환의 목적을 위해서 사용됩니다. <br> 
    
-  flatMap()
+  flatMap() <br> 
   (1) 임의의 개수의 값을 output으로 반환합니다. <br>
   (2) 1:N 매핑이 발생합니다. <br>
   (3) 매핑뿐만 아니라 flattening도 수행합니다. <br>
