@@ -106,6 +106,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://d2.naver.com/helloworld/1329] 
+   
 + Parallel GC는 Serial GC와 기본적인 알고리즘은 같습니다. <br> 
   그러나 Serial GC는 GC를 처리하는 스레드가 하나인 것에 비해, <br> 
   Parallel GC는 GC를 처리하는 쓰레드가 여러 개 입니다. <br> 
