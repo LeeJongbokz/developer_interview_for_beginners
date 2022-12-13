@@ -20,9 +20,7 @@
     private List<Order> orders = new ArrayList<Order>(); 
   
   }
-  ```
-  
-  ```
+   
   @Entity
   @Table(name = "ORDERS")
   public class Order{
@@ -32,7 +30,7 @@
   
    @ManyToOne
    private Member member;
- ```
+  ```
   
  회원과 주문 정보는 1:N, N:1 양방향 연관관계입니다. <br> 
  그리고 회원이 참조하는 주문정보인 Member.orders를 즉시 로딩으로 설정했습니다. <br>   
