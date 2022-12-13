@@ -5,7 +5,6 @@
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
-<br />
 [참고: 자바 ORM 표준 JPA 프로그래밍] 
   
 + JPA로 애플리케이션을 개발할 때, 성능상 가장 주의해야 하는 것이 N+1문제입니다. <br> 
