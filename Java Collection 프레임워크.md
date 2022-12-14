@@ -112,6 +112,43 @@
 -----------------------
 
 
+### 해시 충돌이 발생하더라도, 키-값 쌍 데이터를 잘 저장하고 조회할 수 있게 하는 방식에는 무엇이 있는가?
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://d2.naver.com/helloworld/831311] 
+   
++ 첫번째로, Open Addressing 방식, 두번째로 Separate Chaining 방식이 있습니다. <br> 
+  Open Addressing은 데이터를 삽입하려는 해시 버킷이 이미 사용중인 경우, <br> 
+  다른 해시 버킷에 해당 데이터를 삽입하는 방식입니다. <br> 
+  데이터를 저장/조회할 해시 버킷을 찾을 때에는 Linear Probing, Quadratic Probing 등의 방법을 사용합니다. <br> 
+   
+  Separate Chaining에서 각 배열의 인자는 인덱스가 같은 해시 버킷을 연결한 링크드 리스트의 첫 부분(head)입니다. <br> 
+  둘 모두 Worst Case O(M)입니다. 하지만 Open Addressing은 연속된 공간에 데이터를 저장하기 때문에 <br>
+  Separate Chaining에 비하여 캐시 효율이 높습니다. <br> 
+  따라서 데이터 개수가 충분히 적다면 Open Addressing이 Separate Chaining보다 더 성능이 좋습니다. <br>
+  하지만 배열의 크기가 커질수록 캐시 효율이라는 Open Addressing의 장점은 사라집니다. <br> 
+  배열의 크기가 커지면 L1, L2 캐시 적중률(hit ratio)가 낮아지기 때문입니다. <br>  
+   
+</details>
+
+-----------------------
+
+### Java HashMap에서 사용하는 방식은 무엇인가?
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://d2.naver.com/helloworld/831311] 
+   
++ Java HashMap에서 사용하는 방식은 Separate Chaining입니다. <br> 
+   
+   
+</details>
+
+-----------------------
+
+
+
 ### Java Set 인터페이스 구현체의 종류는?
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
