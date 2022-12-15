@@ -29,8 +29,17 @@
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
-<br />
-+ 
+[참고: https://github.com/binghe819/tech-interview] 
+   
++ ==: 동일성 <br> 
+  -> ==은 기본자료형이면 값 비교, 참조 자료형이면 주소 비교를 통해 boolean 값을 리턴합니다. <br> 
+  equals(): 동등성 <br>   
+  -> equals()는 Object 클래스에 정의된 메서드이며, 객체의 값을 비교하여 boolean 값을 리턴합니다. <br> 
+  -> equals()와 hashCode()를 재정의함으로써, 동등성을 구현합니다. <br> 
+  hashCode()를 재정의하지 않는다면? <br> 
+  -> HashMap과 HashTable에서 key에 대한 중복 여부를 equals()와 hashCode()로 하기 때문에, <br> 
+     둘 다 재정의해줘야 합니다. <br> 
+     hashCode()를 재정의할 땐, 해당 객체의 상태를 통해 해시값을 계산해야 합니다. <br> 
 </details>
 
 -----------------------
