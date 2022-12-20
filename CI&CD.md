@@ -119,3 +119,57 @@
 
 -----------------------
 
+### 젠킨스 설치란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://www.jenkins.io/doc/book/installing/] 
+   
++ 젠킨스는 일반적으로 자기 자신의 프로세스에 따라서 독립적인 어플리케이션으로 동작합니다. <br> 
+  젠킨스 WAR 파일은 Winstone, Jetty 서블릿 컨테이너 wrapper를 묶고, <br> 
+  Jenkins가 지원하는 자바 버전에 따라서, 어떤 OS 혹은 플랫폼에서도 실행될 수 있습니다. <br> 
+   
+  이론적으로, 젠킨스는 전통적인 서블릿 컨테이너인 Apache Tomcat 혹은 WildFly와 같은 것으로 서블릿으로 실행될 수 있으나, <br>
+  실제로 이것은 대체로 테스트되지 않았고, 많은 결함이 있습니다. <br> 
+   
+  특별히, WebSocket agents에 대한 지원은 오직 Jetty Servlet Container에서 실행됩니다. <br>  
+   
+</details>
+
+-----------------------
+
+### 서블릿이란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://www.jenkins.io/doc/book/installing/] 
+   
++  
+   
+</details>
+
+-----------------------
+
+### Jetty란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://www.eclipse.org/jetty/] 
+   
++ Jetty는 웹 서버와 서블릿 컨테이너를 제공하고, 추가적으로 HTTP/2, WebSocket, OSGi, JMX, JNDI, <br>
+  JAAS 그리고 다른 많은 integration을 위한 서포트를 제공합니다. <br> 
+  이러한 요소들은 오픈 소스이고, 상업적인 사용과 배포를 위해 자유롭게 사용될 수 있습니다. <br> 
+   
+  Jetty는 다양한 프로젝트와 제품에 사용되고, 개발과 프로덕션 둘 다에 사용됩니다. <br> 
+  Jetty는 쉽게 기기, 툴, 프레임워크, 어플리케이션 서버, 그리고 현대 클라우드 서비스에 내장될 수 있다는 점으로 인해<br>
+  오랫동안 개발자들에 의해 사랑받아 왔습니다. <br>
+   
+  특징 <br>
+  - 
+</details>
+
+-----------------------
+
