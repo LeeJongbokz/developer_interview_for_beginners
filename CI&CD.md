@@ -178,6 +178,49 @@
 
 -----------------------
 
+### 빌드한다는 것이 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://www.jenkins.io/doc/book/pipeline/jenkinsfile/] 
+   
++ 많은 프로젝트에서 파이프라인에서 '작업'의 시작은 '빌드' 단계입니다. <br> 
+  일반적으로 파이프라인의 이 단계는 소스 코드가 합쳐지고, 컴파일되고 혹은 패키징됩니다. <br> 
+  Jenkinsfile은 현재의 빌드 툴인 GNU/Make, Maven, Gradle, 등에 대한 대체재가 아닙니다. <br> 
+  오히려 프로젝트의 개발 라이프사이클(빌드, 테스트, 배포 등)의 여러 단계를 묶는 <br> 
+  glue layer로 볼 수 있습니다. <br> 
+   
+  Jenkins는 일반적인 사용을 위해 어떤 빌드 툴이든 실용적으로 호출하는 여러 플러그인을 갖고 있지만, <br> 
+  이 예시에서는 단순히 쉘 단계에서 make를 호출하겠습니다. <br> 
+  sh 스텝은 시스템이 Unix/Linux에 기반함을 가정하며, 윈도우에 기반한 시스템에서는 bat가 대신 사용될 수 있습니다. <br> 
+   
+  ```
+    Jenkinsfile (Declarative Pipeline)
+      pipeline {
+          agent any
+
+          stages {
+              stage('Build') {
+                  steps {
+                      sh 'make' 
+                      archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
+                  }
+              }
+          }
+     }
+  ``` 
+  - sh 스텝은 make 명령을 호출하고, 명령에 의해 zero exit code가 리턴될때만 계속합니다. <br>
+    어떤 non-zero exit code도 파이프라인을 실패합니다. <br> 
+   
+  - archiveArtifacts는 포함 패턴(**/target/*.jar)과 일치하는 빌드된 파일을 캡처하고, <br>
+    나중에 검색할 수 있도록 Jenkins 컨트롤러에 저장합니다. <br> 
+   
+</details>
+
+
+-----------------------
+
 
 ### 서술적 파이프라인이란?
 
