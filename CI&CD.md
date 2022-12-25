@@ -132,6 +132,47 @@
   기본적인 세 단계의 지속적 배포 파이프라인을 구현한 아래 파이프라인을 봐봅시다. <br> 
 
   ```
+   Jenkinsfile (Declarative Pipeline)
+      pipeline {
+          agent any
+
+          stages {
+              stage('Build') {
+                  steps {
+                      echo 'Building..'
+                  }
+              }
+              stage('Test') {
+                  steps {
+                      echo 'Testing..'
+                  }
+              }
+              stage('Deploy') {
+                  steps {
+                      echo 'Deploying....'
+                  }
+              }
+          }
+      }
+  ```
+  
+  모든 파이프라인이 이 세 가지 스테이지를 갖고 있는 것은 아니지만, <br> 
+  이것은 대부분의 프로젝트에서 그것들을 정의하는데 있어서 좋은 시작점입니다. <br> 
+  이 섹션은 Jenkins의 테스트 설치 과정에서의 간단한 파이프라인의 생성과 실행을 보여줍니다. <br>
+   
+  이 때, source control 저장소가 이미 프로젝트를 위해 셋업되어 있고, <br> 
+  파이프라인이 Jenkins로 정의되어 있다는 것을 가정합니다. <br>  
+   
+  이상적으로는 그루비 문법 하이라이팅을 지원하는 텍스트 에디터를 활용해서 <br> 
+  프로젝트의 루트 디렉토리에 새로운 Jenkinsfile을 생성합니다. <br> 
+   
+  위의 선언적 파이프라인 예시는 지속적인 배포 파이프라인을 구현하기 위한 최소한의 필요한 구조만을 포함합니다. <br>
+  필요한 agent directive는 Jenkins가 파이프라인을 위한 executor와 workspace를 배치하도록 지시합니다. <br> 
+  Agent Directive 없이는 선언적 파잉프라인이 유효하지 않을 뿐만 아니라, 어떠한 작업도 할 수 없습니다. <br> 
+  기본적으로 Agent Directive는 source 저장소가 체크 아웃되고, 이후 스테이지를 위한 준비가 되도록 합니다. <br>   
+   
+  Stages Directive와 Steps Directive가 또한 유효한 선언적 파이프라인을 위해 필요하며, <br>
+  그 이유는 그것들이 Jenkins에게 무엇을 실행하고, 어떤 stage에서 그것이 실행되어야 하는지 알려주기 때문입니다. <br> 
    
 </details>
 
