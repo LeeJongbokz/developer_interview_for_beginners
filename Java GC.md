@@ -8,9 +8,122 @@
 <br />
 
 + 더 이상 참조되지 않는 객체를 모아서 정리하는 것을 의미합니다. 
+   
+
+[참고: JVM Performance Optimizing p.25]    
+   
++ 본 절에서는 HotSpot JVM의 Garbage Collection에 대한 기본적인 동작 방식과 Internal한 내용이 포함되어 있다. <br>
+  본문 내용을 통해 WAS의 Suspend 현상과 애플리케이션 Thread, Garbage Collection Thread 간의 경합에 대해 이해하고, <br> 
+  나아가 특정 환경에 적합한 Garbage Collector를 선택할 수 있는 기본적인 지식을 제공할 목적이다. <br> 
+   
+  앞서 본 Garbage Collection에 대한 JVM Speculation을 부연 설명하자면, 이미 할당된 Memory는 Garbage Collection(이하 GC)에 의해 <br> 
+  해제가 되는데 이 때 Garbage는 Heap과 Method Area에서 사용되지 않는 Object를 의미합니다. <br> 
+  그리고 소스상의 close()는 Object 사용중지 의사표현일 뿐, Object를 Memory에서 삭제하겠다는 의미가 아닙니다. <br> 
+  개발자는 System.GC()를 명시적으로 사용하여 GC를 발생시킬 수 있지만, 이 경우에는 Full GC가 발생합니다. <br> 
+   
+   
+   
 </details>
 
 -----------------------
+
+### GC로 인한 문제점이 무엇입니까? 
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
++ 더 이상 참조되지 않는 객체를 모아서 정리하는 것을 의미합니다. 
+   
+
+[참고: JVM Performance Optimizing p.25]    
+   
++ GC라는 자동화 메커니즘으로 인해 프로그래머는 직접 Memory를 핸들링 할 필요가 없게 되었습니다. <br> 
+  더불어 잘못된 Memory 접근으로 인한 Crash 현상의 소지도 없어지게 되었으니, 더 없이 편리한 기능이 아닐 수 없습니다. <br> 
+  그러나 GC는 명시적인 Memory 해제보다 느리며, GC 순간 발생하는 Suspend Time으로 인해 다양한 문제를 야기시킵니다. <br> 
+  시스템의 성격마다 Suspend Time 허용치는 각각 다르겠지만, GC 튜닝을 실시할 경우 통상 애플리케이션 최적화 이후(생성 오브젝트 최소화 등) <br> 
+  본격적인 GC 튜닝을 진행합니다. <br>  
+   
+
+</details>
+
+-----------------------
+
+### Root Set과 Garbage란 무엇입니까? 
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
+[참고: JVM Performance Optimizing p.26]    
+   
++ Garbage Collection은 말 그대로 Garbage를 모으는 작업인데, 여기서 Garbage란 사용되지 않는 Object를 말합니다. <br>
+  좀 더 명확히 설명하면 Object의 사용 여부는 Root Set과의 관계로 판단하게 되는데, <br> 
+  Root Set에서 어떤 식으로든 Reference 관계가 있다면, Reachable Object라고 하며 <br>
+  이를 현재 사용하고 있는 Object로 간주하게 됩니다. <br> 
+   
+  Root Set은 광의적 개념으로서 좀 더 구체적으로 말하면 아래와 같이 3가지 참조 형태를 통해 Reachable Object를 판별합니다. <br> 
+  (1) Local Variable Section, Operand Stack에 Object의 Reference 정보가 있다면 Reachable Object이다. <br> 
+  (2) Method Area에 로딩된 클래스 중 constant pool에 있는 Reference 정보를 토대로 Thread에서 직접 참조하진 않지만, <br> 
+      constant pool을 통해 간접 link하고 있는 Object는 Reachable Object이다. <br> 
+  (3) 아직 Memory에 남아 있으며 Native Method Area로 넘겨진 Object의 Reference가 JNI 형태로 참조 관계가 있는 Object는 <br>
+      Reachable Object이다. <br> 
+   
+  위의 3가지 경우를 제외하면 모두 GC 대상이 됩니다. <br>   
+   
+</details>
+
+-----------------------
+
+### Reachable but not Live Object란 무엇입니까? 
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+
+[참고: JVM Performance Optimizing p.27]    
+   
++ 
+   ```
+   import java.util.*;
+   class Main{
+         public static void main(String[] args){
+                Leak lk = new Leak();
+                for(int a=0; a<9000000; a++){
+                      lk.addList(a);
+                      lk.removeStr(a);                    
+                }
+         }
+   }
+                                        
+                                        
+   class Leak{
+       ArrayList lst = new ArrayList();
+       public void addList(int a){
+             lst.add("가나다라마바사아자차카타파하" + a);                                
+       }
+       public void removeStr(int i){
+             Object obj = lst.get(i);
+             obj = null;                           
+       }                
+   }
+   ```
+                                        
+   이 샘플 소스는 Collection 객체인 ArrayList에 String Object를 넣고 바로 제거하려는 의도로 만들어진 코드입니다. <br> 
+   제거하기 위해 만들어진 removeStr() 메소드가 Object Reference 변수를 찾아 null로 치환하는 방식을 사용하였습니다. <br> 
+   
+   그러나 이 소스를 컴파일하여 실행하면 OutOfMemoryException이 발생하여 프로그램이 비정상 종료하게 됩니다. <br> 
+   그 이유는 obj로 받은 것은 String 객체가 아니라 String 객체로 접근하는 Reference 값이기 때문입니다 <br>
+   
+   주민등록이 말소되었다고 사람 자체가 없어지지 않는 것과 마찬가지로 Reference가 null로 치환되었다고 해서 <br>
+   ArrayList에 들어가 있는 String 객체가 사라지지 않게 됩니다. <br> 
+   하지만 이 String 객체는 이제 사용되지 않을 것입니다. <br> 
+   이것이 바로 "Reachable but not Live" 객체인 것입니다. <br> 
+   이러한 객체가 많아지면 우리는 Heap에 Memory Leak이 발생했다고 표현합니다. <br> 
+</details>
+
+-----------------------
+
 
 ### stop-the-world란 무엇입니까? 
 
