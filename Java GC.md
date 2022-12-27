@@ -44,6 +44,52 @@
 
 -----------------------
 
+### Hotspot JVM의 Heap 구조는 어떻게 되는가? 
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: JVM Performance Optimizing p.20~21] 
+   
++ HotSpot JVM의 Heap 구조에 대해 알아보고자 한다. <br> 
+  HotSpot JVM은 익히 알려져 있듯이 크게 Young Generation과 Old Generation으로 나누어져 있다. <br> 
+  
+  Young Generation은 Eden 영역과 Survivor 영역으로 구성되는데, <br> 
+  Eden 영역은 Object가 Heap에 최초로 할당되는 장소이며, Eden 영역이 꽉 차게 되면 Object의 참조 여부를 따져 <br> 
+  만약 참조가 되어 있는 Live Object이며 Survivor 영역으로 넘기고, 참조가 끊어진 Garbage Object이면 그냥 남겨 놓는다. <br> 
+  모든 Live Object가 Survivor 영역으로 넘어가면 Eden 영역을 모두 청소(Scanvenge)한다. <br> 
+   
+  Survivor 영역은 말 그대로 Eden 영역에서 살아남은 Object들이 잠시 머무르는 곳이다. <br> 
+  이 Survivor 영역은 두 개로 구성되는데(Survivor1, Survivor2) Live Object를 대피시킬 때는, 하나의 Survivor 영역만 사용하게 된다. <br> 
+  이러한 전반의 과정을 Minor GC라고 한다. <br> 
+  자세한 사항은 Garbage Collection 부분에서 상세히 다루기로 한다. <br> 
+   
+  Young Generation에서 Live Object로 오래 살아남아 성숙된 Object는 Old Generation으로 이동하게 된다. <br> 
+  여기서 성숙된 Object란 의미는 애플리케이션에서 특정 회수 이상 참조되어 기준 Age를 초과한 Object를 말한다. <br> 
+  
+  Old Generation 영역은 새로 Heap에 할당되는 Object가 들어오는 것이 아니라, <br> 
+  비교적 오랫동안 참조가 되어 이용되고 있고, 앞으로도 계속 사용될 확률이 높은 Object들을 저장하는 영역이다. <br> 
+  이러한 Promotion 과정 중 Old Generation의 메모리도 충분하지 않으면 해당 영역에도 GC가 발생하는데 <br>
+  이를 가리켜 Full GC(Major GC)라고 한다. <br> 
+   
+  Perm 영역은 보통 Class의 Meta 정보나 Method의 Meta 정보, STatic 변수와 상수 정보들이 저장되는 공간으로 <br> 
+  흔히 메타데이터 저장 영역이라고도 한다. <br> 
+  이 영역은 Java 8 부터는 Native 영역으로 이동하여 Metaspace 영역으로 변경되었다. <br>
+  (다만, 기존 Perm 영역에 존재하던 Static Object는 Heap 영역으로 옮겨져서 GC의 대상이 최대한 될 수 있도록 하였다.) <br> 
+   
+  현재 가장 많이 사용중인 Java 7과 최신 Java8의 구조적인 측면에서 변경 사항을 중심으로 좀 더 비교 설명하고자 한다. <br> 
+  
+  최근 Java 8에서 JVM 메모리 구조적인 개선 사항으로 Perm 영역이 아닌 Metaspace 영역으로 전환되고, 기존 Perm 영역은 사라지게 되었다. <br> 
+  Metaspace 영역은 Heap이 아닌 Native 메모리 영역으로 취급하게 된다. <br>
+  (Heap 영역은 JVM에 의해 관리된 영역이며, Native 메모리는 OS레벨에서 관리하는 영역으로 구분된다.) <br> 
+  Metaspace가 Native 메모리를 이용함으로써 개발자는 영역 확보의 상한을 크게 의식할 필요가 없어지게 되었다. <br>  
+  
+   
+</details>
+
+-----------------------
+
+
 ### GC의 Young 영역은 어떻게 구성됩니까? 그리고 각 영역의 처리절차는 어떻게 됩니까?
 
 <details>
