@@ -124,6 +124,44 @@
 
 -----------------------
 
+### Hotspot JVM의 Garbage Collection이란 무엇입니까?  
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: JVM Performance Optimizing p.29] 
+   
++ HotSpot JVM은 기본적으로 Generational Collection 방식을 사용합니다. <br> 
+  즉, Heap을 Object의 Generation 별로 Young Area와 Old Area로 구분하며 <br>
+  Young Area는 다시 Eden Area와 Survivor Area로 구분하여 사용됩니다. <br> 
+   
+  GC 메커니즘은 경험적 지식(Weak Generational Hypothesis 이라고도 한다)으로 두 가지 가설을 두고 있는데, <br>
+  첫째로 대부분의 "Object는 생성된 후 금방 Garbage가 된다. (high infant mortality)" <br>
+  둘째로 "Older Object가 Younger Object를 참조할 일은 드물다"라는 것입니다. <br> 
+   
+  첫번째 가설을 보면 새로 할당되는 Object가 모인 곳은 단편화 발생 확률이 높다고 간주됩니다. <br> 
+  Memory 할당은 기존 Object 다음 주소에서 계속 수행을 하게 되며, <br> 
+  Garbage는 먼저 할당된 부분에서 많이 생길 것입니다. <br> 
+  이 때, Sweep 작업(Mark되지 않은 Object를 제거)을 수행하면 단편화가 발생하게 되며, <br>
+  이후 Compaction처럼 비싼 작업을 해야 합니다. <br>
+   
+  때문에 Object 할당만을 위한 전용 공간인 Eden Area를 만들게 된 거고, <br> 
+  GC 당시 Live한 Object들을 피신시키는 Survivor Area를 따로 구성한 것입니다. <br> 
+  즉, Garbage가 될 확률이 적은 Object를 따로 관리한다는 것입니다. <br> 
+   
+  Garbage를 추적하는 부분은 Tracing 알고리즘을 사용합니다. <br> 
+  즉, Root Set에서 Reference 관계를 추적하고, Live Object는 Marking 합니다. <br> 
+  이러한 Marking 작업도 Young Generation에 국한 되는데, Marking 작업은 Memory Suspend 상황에서 수행되기 때문입니다. <br> 
+   
+  전체 Heap에 대한 Marking 작업은 긴 Suspend Time을 가져갈 것이기 때문입니다. <br> 
+  그런데 만약 이런 상황에서 Older Object가 Young Object를 참조하는 상황이 있다고 가정하면, <br> 
+  존재 여부 체크를 위해 Old Generation을 모두 찾아 다닐 수 있고, 따라서 Suspend Time도 길어집니다. <br> 
+  그렇기 때문에 HotSpot JVM은 Card Table(이벤트 프로그램)이란 장치를 마련했습니다. <br>  
+  
+   
+</details>
+
+-----------------------
 
 ### stop-the-world란 무엇입니까? 
 
