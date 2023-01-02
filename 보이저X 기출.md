@@ -53,9 +53,6 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
-
-<details>
-   <summary> 답안 보기 (👈 Click)</summary>
 [참고: HTTP 완벽 가이드 p.287]
    
 +    
@@ -67,10 +64,7 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
-
-<details>
-   <summary> 답안 보기 (👈 Click)</summary>
-[참고: HTTP 완벽 가이드 p.287]
+[참고: ]
    
 +    
 </details>
