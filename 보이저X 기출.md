@@ -8,11 +8,6 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
-
-### Base64 인코딩이란?
-
-<details>
-   <summary> 답안 보기 (👈 Click)</summary>
 [참고: https://base64.guru/]
    
 + Base64는 가장 인기 있는 binary-to-text 알고리즘으로서, 데이터를 일반 텍스트로 변환함으로써, <br> 
