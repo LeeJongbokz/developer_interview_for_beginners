@@ -287,3 +287,23 @@
 </details>
 
 -----------------------
+
+### JPA의 N+1 문제란? (블랭크랩)
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+   
+</details>
+
+-----------------------
+
+### 동기 vs 비동기? (이스트소프트/모의 면접)
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+   
+</details>
+
+-----------------------
