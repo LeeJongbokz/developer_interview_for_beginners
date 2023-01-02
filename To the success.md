@@ -267,3 +267,23 @@
 </details>
 
 -----------------------
+
+### Node.js의 이벤트 루프란? (블랭크랩)
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+   
+</details>
+
+-----------------------
+
+### Node.js의 싱글 스레드는 어떻게 동작하는가? (헤이비트)
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+   
+</details>
+
+-----------------------
