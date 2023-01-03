@@ -230,12 +230,86 @@ https://xiubindev.tistory.com/119
 
 -----------------------
 
+### Redux-Thunk란 무엇인가?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: 리액트를 다루는 기술 p.482]
+   
++ redux-thunk는 리덕스를 사용하는 프로젝트에서 비동기 작업을 처리할 때, 가장 기본적으로 사용하는 미들웨어입니다. <br>
+  리덕스의 창시자인 댄 아브라모프(Dan Abramov)가 만들었으며, 리덕스 공식 매뉴얼에서도 이 미들웨어를 사용하여 <br>
+  비동기 작업을 다루는 예시를 보여줍니다. <br>
+   
+  Thunk란 특정 작업을 나중에 할 수 있또록 미루기 위해 함수 형태로 감싼 것을 의미합니다. <br>
+  
+  ```
+  const addOne = x => x + 1;
+  addOne(1);
+  ```
+   
+  이 코드를 실행하면 addOne을 호출했을 때 바로 1+1이 연산됩니다. 그런데 이 연산 작업을 나중에 하도록 미루고 싶다면 <br>
+  어떻게 해야 할까요? <br> 
+  
+  ```
+  const addOne = x => x + 1;
+  function addOneThunk (x) {
+     const thunk = () => addOne(x);
+     return thunk;
+  }
+   
+  const fn = addOneThunk(1);
+  setTimeout(() => {
+      const value = fn();
+      console.log(value); 
+  }, 1000); 
+  ```
+   
+  - 이렇게 하면 특정 작업을 나중에 하도록 미룰 수 있습니다
+    만약 addOneThunk를 화살표 함수로만 사용한다면 다음과 같이 구현할 수 있습니다. <br> 
+ ```
+ const addOne = x => x + 1;
+ const addOneThunk = x => () => addOne(x);
+ 
+ const fn = addOneThunk(1);
+ setTimeout(() => {
+    const value = fn(); 
+    console.log(value);
+ }, 1000);
+  
+ redux-thunk 라이브러리를 사용하면 thunk 함수를 만들어서 디스패치할 수 있습니다. <br> 
+ 그러면 리덕스 미들웨어가 그 함수를 전달받아 store의 dispatch와 getState를 파라미터로 넣어서 호출해줍니다. <br> 
+ 다음은 redux-thunk에서 사용할 수 있는 예시 thunk 함수입니다. <br> 
+ ```
+  const sampleThunk = () => (dispatch, getState) => {
+     // 현재 상태를 참조할 수 있고,
+     // 새 액션을 디스패치할 수도 있습니다. 
+  }
+ ```
+</details>
+
+
+-----------------------
+
 ### Redux-saga란 무엇인가?
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
-+ 
+[참고: 리액트를 다루는 기술 p.502]
++ Redux-saga는 redux-thunk 다음으로 많이 사용하는 비동기 작업 관련 미들웨어입니다. <br> 
+  
+  redux-thunk는 함수 형태의 액션을 디스패치하여 미들웨어에서 해당 함수에 스토어의 dispatch와 <br>
+  getState를 파라미터로 넣어서 사용하는 원리입니다. <br> 
+  
+  그래서 구현한 thunk 함수 내부에서 원하는 API 요청도 하고, 다른 액션을 디스패치하거나 현재 상태를 조회하기도 했습니다. <br> 
+  대부분의 경우에는 이전 절에서 배운 redux-thunk로도 충분히 기능을 구현할 수 있습니다. <br> 
+  
+  이번에 배울 redux-saga는 좀 더 까다로운 상황에서 유용합니다. 예를 들어 다음과 같은 상황에서 redux-saga를 사용하는 것이 유리합니다. <br> 
+  (1) 기존 요청을 취소 처리해야 할 때(불필요한 중복 요청 방지) <br>
+  (2) 특정 액션이 발생했을 때, 다른 액션을 발생시키거나, API 요청 등 리덕스와 관계없는 코드를 실행할 때, <br>
+  (3) 웹소켓을 사용할 때 <br>
+  (4) API 요청 <br>
 </details>
 
 
