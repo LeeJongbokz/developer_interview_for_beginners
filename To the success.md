@@ -307,3 +307,13 @@
 </details>
 
 -----------------------
+
+### HTTP vs HTTPS? (자란다)
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+   
+</details>
+
+-----------------------
