@@ -1,4 +1,4 @@
-# 보이저X
+# 네이버Z
 https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 
 <br>
