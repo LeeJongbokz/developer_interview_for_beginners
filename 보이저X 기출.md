@@ -138,6 +138,18 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 
 -----------------------
 
+### CI/CD란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+
++ 
+</details>
+
+
+-----------------------
+
+
 ### CORS란?
 
 <details>
