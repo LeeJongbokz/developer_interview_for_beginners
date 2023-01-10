@@ -116,7 +116,7 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 -----------------------
 
 
-### Docker와 Virtual Machine의 차이점은?
+### Docker와 Virtual Machine의 차이점은? (기출) 
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
@@ -127,7 +127,7 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 
 -----------------------
 
-### 방화벽이란?
+### 방화벽이란? (기출) 
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
@@ -165,7 +165,7 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 -----------------------
 
 
-### CI/CD란?
+### CI/CD란? (기출) 
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
