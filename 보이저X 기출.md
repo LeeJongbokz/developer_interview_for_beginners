@@ -49,7 +49,7 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 
 -----------------------
 
-### HTTP/2의 특징은?
+### HTTP/2의 특징은? (기출) 
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
@@ -60,7 +60,7 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
  
 -----------------------
 
-### MySQL과 MongoDB의 차이점은?
+### MySQL과 MongoDB의 차이점은? (기출) 
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
@@ -71,7 +71,7 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 
 -----------------------
 
-### System Call이란?
+### System Call이란? (기출) 
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
@@ -177,7 +177,7 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 -----------------------
 
 
-### CORS란?
+### CORS란? (기출) 
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
