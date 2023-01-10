@@ -382,6 +382,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://hanamon.kr/dns%EB%9E%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%84%A4%EC%9E%84-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%EC%9E%91%EB%8F%99-%EB%B0%A9%EC%8B%9D%EA%B9%8C%EC%A7%80/]    
+   
 + DNS는 사람이 읽을 수 있는 도메인 이름(ex)www.hanamon.co.kr)을 IP주소로 변환하는 시스템입니다. <br> 
   이번 글에서는 도메인 주소를 IP 주소로 변환할 수 있게 하는 인프라가 어떻게 구성 되어 있고, 실제로 어떤 기계들이 어떤 과정으로 동작하는지 알아보겠습니다.<br> 
   중요한 것은 왜 이러한 전세계적인 시스템을 인간들이 만들어냈는지, 그 많은 도메인 이름을 도대체 어디에 저장되어 있는 것인지, <br>
@@ -406,6 +407,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://hanamon.kr/dns%EB%9E%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%84%A4%EC%9E%84-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%EC%9E%91%EB%8F%99-%EB%B0%A9%EC%8B%9D%EA%B9%8C%EC%A7%80/]    
+   
 + DNS는 아래 세 가지 요소로 구성됩니다. <br> 
   1. 도메인 네임 스페이스(Domain Name Space) <br>
   2. 네임 서버 - 권한 있는 DNS 서버 <br> 
@@ -432,6 +434,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://hanamon.kr/dns%EB%9E%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%84%A4%EC%9E%84-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%EC%9E%91%EB%8F%99-%EB%B0%A9%EC%8B%9D%EA%B9%8C%EC%A7%80/]    
+   
 + (1) 웹 브라우저는 resolver에게 요청합니다. (ex) www.hanamon.kr의 IP 주소를 알려주세요"); <br>
   (2) Resolver는 최상위 기관에서 관리하는 네임 서버에게 요청합니다. (ex) ".kr이라는 도메인이 있나요?"); <br> 
   (3) 최상위 기관에서 관리하는 네임 서버는 응답합니다. (ex) ".kr은 한국 국가 도메인입니다. .kr 네임 서버로 가보세요~"); 
@@ -450,6 +453,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://hanamon.kr/dns%EB%9E%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%84%A4%EC%9E%84-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%EC%9E%91%EB%8F%99-%EB%B0%A9%EC%8B%9D%EA%B9%8C%EC%A7%80/]    
+   
 + DNS는 전세계적인 거대한 분산 시스템입니다. <br> 
   도메인 네임 스페이스는 이러한 DNS가 저장 관리하는 계층적 구조를 의미합니다. <br> 
   도메인 네임 스페이스는 최상위 루트 DNS 서버가 존재하고, 그 하위로 연결된 모든 노드가 연속해서 이어진 계층 구조로 되어 있습니다. (폴더 구조와 비슷합니다.) <br>
@@ -464,6 +468,7 @@
    <summary> 답안 보기 (👈 Click)</summary>
 <br />
 [참고: https://hanamon.kr/dns%EB%9E%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%84%A4%EC%9E%84-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%EC%9E%91%EB%8F%99-%EB%B0%A9%EC%8B%9D%EA%B9%8C%EC%A7%80/]    
+   
 + 도메인 네임 스페이스의 트리 구조는 최상위 레벨부터 순차적으로 계층적 소속 관계를 나타냅니다. <br> 
   하위 조직의 네임 스페이스를 할당하고 관리하는 방식은 각 하위 기관의 관리 책임자에게 위임됩니다. <br> 
   예를 들어, hanamon.kr 도메인은 kr 도메인을 관리하는 네임 서버에 등록되어 있고, <br> 
