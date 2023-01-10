@@ -4,7 +4,7 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 <br>
 
 
-### Base64 인코딩이란?
+### Base64 인코딩이란? (기출) 
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
@@ -55,7 +55,7 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
    <summary> 답안 보기 (👈 Click)</summary>
 [참고: HTTP 완벽 가이드 p.287]
    
-+    
++     
 </details>
  
 -----------------------
@@ -181,8 +181,41 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
-   
-+    
+[참고: https://developer.mozilla.org/ko/docs/Web/HTTP/CORS]    
+
++ 교차 출처 리소스 공유는 추가 HTTP 헤더를 사용하여, 한 출처에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 <br> 
+  부여하도록 브라우저에 알려주는 체제입니다. 웹 애플리케이션은 리소스가 자신의 출처(도메인, 프로토콜, 포트)와 다를 때, <br> 
+  교차 출처 HTTP 요청을 실행합니다. <br> 
+</details>
+
+-----------------------
+
+### CORS의 예시는 어떠합니까?  
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+[참고: https://developer.mozilla.org/ko/docs/Web/HTTP/CORS]    
+
++ https://doamin-a.com의 프론트엔드 Javascript 코드가 XMLHttpRequest를 사용하여 https://domain-b.com/data.json을 요청하는 경우 <br> 
+  보안 상의 이유로, 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. <br> 
+  예를 들어, XMLHttpRequest와 Fetch API는 동일 출처 정책을 따릅니다. 즉, 이 API를 사용하는 웹 애플리케이션은 자신의 출처와 <br>
+  동일한 리소스만 불러올 수 있으며, 다른 출처의 리소스를 불러오려면 그 출처에서 올바른 CORS 헤더를 포함한 응답을 반환해야 합니다. <br> 
+  
+  ![image](https://user-images.githubusercontent.com/8718430/211547444-63b9ac96-5c4f-43d1-aac5-87e186738923.png)
+
+  CORS 체제는 브라우저와 서버 간의 안전한 교차 출처 요청 및 데이터 전송을 지원합니다. <br> 
+  최신 브라우저는 XMLHttpRequest 또는 Fetch와 같으느 API에서 CORS를 사용하여 교차 출처 HTTP 요청의 위험을 완화합니다. <br> 
+</details>
+
+-----------------------
+
+### Fetch API란 무엇입니까?  
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+[참고: https://developer.mozilla.org/ko/docs/Web/HTTP/CORS]    
+
++ 
 </details>
 
 -----------------------
