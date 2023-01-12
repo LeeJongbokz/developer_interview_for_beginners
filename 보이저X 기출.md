@@ -49,6 +49,18 @@ https://v6xcareer.notion.site/2f61a1b40c81495eaf564cde9efc6089
 
 -----------------------
 
+### Base64 인코딩을 사용하는 이유는 무엇입니까? 다른 저장 매체 간 전송 시 데이터 변조를 예방한다는 것이 무엇입니까? (기출) 
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+[참고: https://base64.guru/]
+   
++ 
+</details>
+
+
+-----------------------
+
 ### HTTP/2란? (기출) 
 
 <details>
