@@ -36,3 +36,17 @@
 </details>
 
 -----------------------
+
+### 런타임이란 무엇입니까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://aws.amazon.com/ko/containers/] 
+   
++ 
+   
+  
+</details>
+
+-----------------------
