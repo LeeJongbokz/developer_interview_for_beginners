@@ -20,7 +20,7 @@
 
 -----------------------
 
-### AWS S3의 기능?
+### AWS S3의 기능은?
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
