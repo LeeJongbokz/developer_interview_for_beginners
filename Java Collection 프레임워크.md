@@ -140,12 +140,52 @@
 <br />
 [참고: https://d2.naver.com/helloworld/831311] 
    
-+ Java HashMap에서 사용하는 방식은 Separate Chaining입니다. <br> 
++ Java HashMap에서 사용하는 방식은 Separate Chaining입니다.
+  Open Addressing은 데이터를 삭제할 때 처리가 효율적이기 어려운데, HashMap에서 remove() 메서드는 매우 빈번하게 호출될 수 있기 때문입니다.
+  게다가 HashMap에 저장된 키-값쌍 개수가 일정 개수 이상으로 많아지면,
+  일반적으로 Open Addressing은 Separate Chaining보다 느립니다.
+  Open Addressing의 경우 해시 버킷을 채운 밀도가 높아질수록, Worst Case발생 빈도가 더 높아지기 때문이다.
+  반면, Separate Chaining 방식의 경우 해시 충돌이 잘 발생하지 않도록 '조정'할 수 있다면,
+  Worst Case 또는 Worst Case에 가까운 일이 발생하는 것을 줄일 수 있다. 
+  <br> 
    
    
 </details>
 
 -----------------------
+
+### Java8 HashMap에서의 Separate Chaining이란?
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+<br />
+[참고: https://d2.naver.com/helloworld/831311] 
+   
++ Java2부터 Java7까지의 HashMap에서 Separate Chaining 구현 코드는 조금씩 다르지만, 구현 알고리즘 자체는 같았다.
+  만약 객체의 해시 함수 값이 균등 분포(Uniform Distribution) 상태라고할 때, get() 메서드 호출에 대한 기댓값은 E(N/M)이다.
+  그러나 Java8에서는 이보다 더 나은 E(logN/M)을 보장한다.
+
+  데이터의 개수가 많아지면, Separate Chaining에서 링크드 리스트 대신에 트리를 사용하기 때문이다.
+  데이터의 개수가 많아지면 N/M과 logN/M과의 차이는 무시할 수 없다.
+  게다가 실제 해시 값은 균등 분포가 아닐뿐더러, 설사 균등 분포를 따른다고 하더라도 birthday problem이
+  설명하듯 일부 해시 버킷 몇 개에 데이터가 집중될 수 있다.
+  그래서 데이터의 개수가 일정 이상일 때는 링크드 리스트 대신 트리를 사용하는 것이 성능상 이점이 있다.
+
+  링크드 리스트를 사용할 것인가 트리를 사용할 것인가에 대한 기준은 하나의 해시 버킷에 할당된 키-값 쌍의 개수이다.
+  예제 5에서 보듯 Java8 HashMap에서는 상수 형태로 기준을 정하고 있다.
+  즉, 하나의 해시 버킷에 8개의 키-값 쌍이 모이면 링크드 리스트를 트리로 변경한다.
+  만약 해당 버킷에 있는 데이터를 삭제하여 개수가 6개에 이르면 다시 링크드 리스트로 변경한다.
+  트리는 링크드 리스트보다 메모리 사용량이 많고, 데이터의 개수가 적을 때 트리와 링크드 리스트의 Worst Case 수행 시간 차이 비교는
+  의미가 없기 때문이다.
+  8과 6으로 2 이상의 차이를 둔 것은, 만약 차이가 1이라면 어떤 한 키-값 쌍이 반복되어 삽입/삭제되는 경우
+  불필요하게 트리와 링크드 리스트를 변경하는 일이 반복되어 성능 저하가 발생할 수 있기 때문이다. 
+  
+  <br> 
+   
+   
+</details>
+
+-----------------------
+
 
 
 
