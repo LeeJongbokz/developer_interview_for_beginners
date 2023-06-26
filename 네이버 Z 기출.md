@@ -113,7 +113,7 @@
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
-
+[참고: 자바의 정석 p.584, p.596] 
 + ArrayList - ArrayList는 컬렉션 프레임웍에서 가장 많이 사용되는 컬렉션 클래스일 것이다.
               이 ArrayList는 List인터페이스를 구현하기 때문에 데이터의 저장순서가 유지되고 중복을 허용한다는 특징을 갖는다.
               ArrayList는 기존의 Vector를 개선한 것으로 Vector와 구현원리와 기능적인 측면에서 동일하다고 할 수 있다.
@@ -157,8 +157,11 @@
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
-
-+ 
+[참고: 자바의 정석 p.579]
++ Set은 순서를 유지하지 않는 데이터의 집합이며 데이터의 중복을 허용하지 않는다.
+  구현 클래스로는 HashSet과 TreeSet이 있다. 
+  Map은 키(key)와 값(value)의 쌍(pair)으로 이루어진 데이터의 집합이다. 
+  순서는 유지되지 않으며, 키는 중복을 허용하지 않고, 값은 중복을 허용한다.    
 </details>
 
 
@@ -168,8 +171,8 @@
 
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
-
-+ 
+[참고: 자바의 정석 p.644, 
++ Hash
 </details>
 
 
