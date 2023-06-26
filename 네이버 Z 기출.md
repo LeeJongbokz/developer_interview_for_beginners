@@ -172,7 +172,7 @@
 <details>
    <summary> 답안 보기 (👈 Click)</summary>
 [참고: 자바의 정석 p.644, 
-+ Hash
++ HashTable과 HashMap의 관계는 Vector와 ArrayList의 관계와 같아서 HashTable보다는 
 </details>
 
 
