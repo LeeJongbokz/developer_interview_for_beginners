@@ -222,20 +222,70 @@
 
 -----------------------
 
+### 자바의 equals와 =의 다른 점은?
 
-등호(=)와 다른 점은?
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
 
-등호(=)와 hashcode랑 다를까요?
++ 
+</details>
 
-박싱과 언박싱 설명
 
-왜 primitive 타입과 reference 타입이 나눠져있을까
+-----------------------
 
-자바에서 접근제어자 설명
+### 자바의 박싱과 언박싱이란?
 
-접근제어자 예약어는 다 그대로 쓰면 되는지? 생략이 가능한지?
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
 
-스레드와 프로세스의 차이
++ 
+</details>
+
+
+-----------------------
+
+### 자바의 Primitive 타입과 Reference 타입이 왜 나눠져 있을까?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+
++ 
+</details>
+
+
+-----------------------
+
+### 자바의 접근제어자란?
+
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+
++ 
+</details>
+
+
+-----------------------
+
+### 자바의 접근제어자 예약어는 다 그대로 쓰면 되는지? 생략이 가능한지?
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+
++ 
+</details>
+
+
+-----------------------
+
+### 스레드와 프로세스의 차이점은?
+<details>
+   <summary> 답안 보기 (👈 Click)</summary>
+
++ 
+</details>
+
+
+-----------------------
+
 
  
 
